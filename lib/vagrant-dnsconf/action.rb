@@ -22,7 +22,6 @@ module VagrantPlugins
 	  @machine.guest.capability(:set_conf, replaces, deletes)
 
           @app.call(env)
-          end
 	end
       end
     end
