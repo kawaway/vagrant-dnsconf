@@ -15,11 +15,15 @@ module VagrantPlugins
         Config
       end
 
-      action_hook 'dnsconf_configure' do |hook|
+      action_hook 'dns_configure' do |hook|
         require_relative 'action'
+
+        # the standard provision action
+        hook.after Vagrant::Action::Builtin::Provision, Action::ConfigureDNS
+
 	# before shared_folder
-	hook.before(VagrantPlugins::SyncedFolderNFS, Action::ConfigureDNS)
-	hook.before(VagrantPlugins::SyncedFolderSMB, Action::ConfigureDNS)
+	#hook.before(VagrantPlugins::SyncedFolderNFS, Action::ConfigureDNS)
+	#hook.before(VagrantPlugins::SyncedFolderSMB, Action::ConfigureDNS)
       end
 
       guest_capability('debian', 'set_conf') do
