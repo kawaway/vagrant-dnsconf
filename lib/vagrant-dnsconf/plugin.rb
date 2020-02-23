@@ -27,8 +27,8 @@ module VagrantPlugins
       end
 
       guest_capability('debian', 'set_conf') do
-        require_relative 'cap/debian/dns_action.rb'
-        Cap::Debian::DnsSetConf
+        require_relative 'cap/debian/set_conf.rb'
+        Cap::Debian::SetConf
       end
     end
   end

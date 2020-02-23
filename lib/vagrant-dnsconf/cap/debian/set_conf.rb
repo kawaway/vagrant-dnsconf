@@ -4,7 +4,7 @@ module VagrantPlugins
   module DnsConf
     module Cap
       module Debian
-        module DnsConfSet
+        module SetConf
 
 	  def self.set_conf(m, deletes, deletes)
             _set_conf(m, replaces, deletes, "/etc/resolv.conf")
