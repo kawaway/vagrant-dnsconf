@@ -1,30 +1,30 @@
-# Vagrant::Dns::Conf
+# Vagrant::DnsConf
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vagrant/dns/conf`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+set vagrant guest dns configuration, e.g. resolv.conf
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'vagrant-dns-conf'
+```sh
+git clone https://github.com/kawaway/vagrant-dnsconf
+cd vagrant-dnsconf
+bundle install
+rake build
+vagrant plugin install pkg/vagrant-dnsconf-*.gem
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-dns-conf
 
 ## Usage
 
-TODO: Write usage instructions here
 
 ## Development
+
+```sh
+git clone https://github.com/kawaway/vagrant-dnsconf
+cd vagrant-dnsconf
+bundle install
+rake build
+vagrant plugin install pkg/vagrant-dnsconf-*.gem
+```
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/vagrant-dns-conf. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kawaway/vagrant-dnsconf. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
