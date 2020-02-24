@@ -19,11 +19,7 @@ module VagrantPlugins
         require_relative 'action'
 
         # the standard provision action
-        hook.after Vagrant::Action::Builtin::Provision, Action::ConfigureDNS
-
-	# before shared_folder
-	#hook.before(VagrantPlugins::SyncedFolderNFS, Action::ConfigureDNS)
-	#hook.before(VagrantPlugins::SyncedFolderSMB, Action::ConfigureDNS)
+        hook.after Vagrant::Action::Builtin::WaitForCommunicator, Action::ConfigureDNS
       end
 
       guest_capability('debian', 'set_dnsconf') do
