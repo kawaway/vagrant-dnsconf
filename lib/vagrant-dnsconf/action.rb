@@ -14,12 +14,12 @@ module VagrantPlugins
 
 	def call(env)
           @app.call(env) unless @config.is_set?
-	  
-          replaces = @config.replaces
-          deletes  = @config.deletes
+	  opts |= Hash.new
+          opts[:replaces] = @config.replaces
+          opts[:deletes]  = @config.deletes
 
-          @ui.info "setting dns configuration #{replaces}, #{deletes}"
-	  @machine.guest.capability(:set_dnsconf, replaces, deletes)
+          @ui.info "setting dns configuration #{opts[:replaces]}, #{opts[:deletes]}"
+	  @machine.guest.capability(:set_dnsconf, opts)
 
           @app.call(env)
 	end

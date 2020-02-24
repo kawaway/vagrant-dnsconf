@@ -6,13 +6,13 @@ module VagrantPlugins
       module Debian
         module SetDnsConf
 
-	  def self.set_dnsconf(m, deletes, deletes)
-            _set_conf(m, replaces, deletes, "/etc/resolv.conf")
-            _set_conf(m, replaces, deletes, "/etc/networks/interfaces")
+	  def self.set_dnsconf(m, opts)
+            _set_conf(m, opts[:replaces], opts[:deletes], "/etc/resolv.conf")
+            _set_conf(m, opts[:replaces], opts[:deletes], "/etc/networks/interfaces")
 	  end
 
 	  private
-	  def self._set_conf(m, deletes, deletes, file)
+	  def self._set_conf(m, replaces, deletes, file)
 	    deletes.each do |delete|
               @m.communicate.sudo("sed -e -i \"/#{delete}/d\" #{file}")
 	    end
