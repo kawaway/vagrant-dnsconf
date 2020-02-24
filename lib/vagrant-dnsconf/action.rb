@@ -18,7 +18,7 @@ module VagrantPlugins
           replaces = @config.replaces
           deletes  = @config.deletes
 
-          @ui.info "set dns-server #{replaces}, #{deletes}"
+          @ui.info "setting dns configuration #{replaces}, #{deletes}"
 	  @machine.guest.capability(:set_conf, replaces, deletes)
 
           @app.call(env)
