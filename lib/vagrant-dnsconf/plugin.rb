@@ -15,7 +15,7 @@ module VagrantPlugins
         Config
       end
 
-      action_hook 'dns_configure' do |hook|
+      action_hook 'set_dnsconf' do |hook|
         require_relative 'action'
 
         # the standard provision action
@@ -26,9 +26,9 @@ module VagrantPlugins
 	#hook.before(VagrantPlugins::SyncedFolderSMB, Action::ConfigureDNS)
       end
 
-      guest_capability('debian', 'set_conf') do
-        require_relative 'cap/debian/set_conf.rb'
-        Cap::Debian::SetConf
+      guest_capability('debian', 'set_dnsconf') do
+        require_relative 'cap/debian/set_dnsconf.rb'
+        Cap::Debian::SetDNSConf
       end
     end
   end
