@@ -14,10 +14,10 @@ module VagrantPlugins
 	  private
 	  def self._set_conf(m, replaces, deletes, file)
 	    deletes.each do |delete|
-              @m.communicate.sudo("sed -e -i \"/#{delete}/d\" #{file}")
+              m.communicate.sudo("sed -i -e \"/#{delete}/d\" #{file}")
 	    end
 	    replaces.each do |replace|
-              @m.communicate.sudo("sed -e -i \"s/#{replace[:before]}/#{replace[:after]}/\" #{file}")
+              m.communicate.sudo("sed -i -e \"s/#{replace[:before]}/#{replace[:after]}/\" #{file}")
             end
           end
 	  # 4.2.2.1
