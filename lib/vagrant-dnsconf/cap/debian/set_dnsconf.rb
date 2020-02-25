@@ -8,7 +8,7 @@ module VagrantPlugins
 
 	  def self.set_dnsconf(m, opts)
             _set_conf(m, opts[:replaces], opts[:deletes], "/etc/resolv.conf")
-            _set_conf(m, opts[:replaces], opts[:deletes], "/etc/networks/interfaces")
+            _set_conf(m, opts[:replaces], opts[:deletes], "/etc/network/interfaces")
 	  end
 
 	  private
