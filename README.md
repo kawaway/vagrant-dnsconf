@@ -15,6 +15,15 @@ vagrant plugin install pkg/vagrant-dnsconf-*.gem
 
 ## Usage
 
+```ruby
+  config.dnsconf.replaces = [
+          {:before => "4.2.2.1", :after => "192.168.100.10"},
+          {:before => "4.2.2.2", :after => "192.168.100.11"}
+  ]
+  config.dnsconf.deletes = [
+        "208.67.220.220"
+  ]
+```
 
 ## Development
 
