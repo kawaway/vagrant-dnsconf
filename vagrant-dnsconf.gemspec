@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["kawawa"]
   spec.email         = ["kawawa.y@gmail.com"]
 
-  spec.summary       = %q{set vagrant guest dns configuration, e.g. resolv.conf}
+  spec.summary       = %q{set vagrant guest dns configuration, e.g. interfaces}
   #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/kawaway/vagrant-dnsconf"
   spec.license       = "MIT"

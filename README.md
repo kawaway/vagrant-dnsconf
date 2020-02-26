@@ -1,6 +1,6 @@
 # Vagrant::DnsConf
 
-set vagrant guest dns configuration, e.g. resolv.conf
+set vagrant guest dns configuration, e.g. interfaces
 
 ## Installation
 
@@ -12,9 +12,8 @@ rake build
 vagrant plugin install pkg/vagrant-dnsconf-*.gem
 ```
 
-
 ## Usage
-
+Add following lines in Vagrantfile
 ```ruby
   config.dnsconf.replaces = [
           {:before => "4.2.2.1", :after => "192.168.100.10"},
@@ -34,10 +33,6 @@ bundle install
 rake build
 vagrant plugin install pkg/vagrant-dnsconf-*.gem
 ```
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
