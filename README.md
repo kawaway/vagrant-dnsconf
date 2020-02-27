@@ -10,8 +10,10 @@ vagrant plugin install vagrant-dnsconf
 ```
 
 ## Usage
-Add following lines in Vagrantfile
+### Example Vagrantfile
 ```ruby
+Vagrant.configure("2") do |config|
+
   config.dnsconf.replaces = [
           {:before => "4.2.2.1", :after => "192.168.100.10"},
           {:before => "4.2.2.2", :after => "192.168.100.11"}
@@ -19,6 +21,8 @@ Add following lines in Vagrantfile
   config.dnsconf.deletes = [
         "208.67.220.220"
   ]
+  # ... other stuff
+end
 ```
 
 ## Development
