@@ -1,6 +1,6 @@
 # Vagrant::DnsConf
 
-set vagrant guest dns configuration, e.g. interfaces
+a vagrant plugin that set guest dns configuration, e.g. interfaces
 
 ## Installation
 
