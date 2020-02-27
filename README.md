@@ -5,11 +5,7 @@ a vagrant plugin that set guest dns configuration, e.g. interfaces
 ## Installation
 
 ```sh
-git clone https://github.com/kawaway/vagrant-dnsconf
-cd vagrant-dnsconf
-bundle install
-rake build
-vagrant plugin install pkg/vagrant-dnsconf-*.gem
+vagrant plugin install vagrant-dnsconf
 ```
 
 ## Usage
