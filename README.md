@@ -2,6 +2,7 @@
 
 a vagrant plugin that set guest dns configuration, e.g. interfaces
 
+confirmed on generic/debian9, generic/debian10
 ## Installation
 
 ```sh
