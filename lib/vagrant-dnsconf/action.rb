@@ -13,8 +13,9 @@ module VagrantPlugins
 	end
 
 	def call(env)
+          return unless @config.is_set?
+
           logger = Log4r::Logger.new('vagrant::dnsconf')
-          @app.call(env) unless @config.is_set?
 	  opts = {replaces: @config.replaces, deletes: @config.deletes}
 
 	  @ui.info "setting dns configuration"
