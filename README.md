@@ -2,7 +2,10 @@
 
 a vagrant plugin that set guest dns configuration, e.g. interfaces
 
-confirmed on generic/debian9, generic/debian10
+confirmed on
+ - generic/debian9, generic/debian10
+ - generic/ubuntu1804
+
 ## Installation
 
 ```sh
@@ -21,6 +24,7 @@ Vagrant.configure("2") do |config|
   config.dnsconf.deletes = [
         "208.67.220.220"
   ]
+  config.dnsconf.dnssec = false # option
   # ... other stuff
 end
 ```

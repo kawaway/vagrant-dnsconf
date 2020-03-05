@@ -26,6 +26,11 @@ module VagrantPlugins
         require_relative 'cap/debian/set_dnsconf.rb'
         Cap::Debian::SetDnsConf
       end
+
+      guest_capability('ubuntu', 'set_dnsconf') do
+        require_relative 'cap/ubuntu/set_dnsconf.rb'
+        Cap::Ubuntu::SetDnsConf
+      end
     end
   end
 end
