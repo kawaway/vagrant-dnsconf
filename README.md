@@ -2,6 +2,9 @@
 
 a vagrant plugin that set guest dns configuration, e.g. interfaces
 
+### objective
+If use synced-folder with nfs, vagrant try to install nfs-common but Installation fails if resolv.conf contains an inaccessible dns server addresses.
+
 confirmed on
  - generic/debian9, generic/debian10
  - generic/ubuntu1804
