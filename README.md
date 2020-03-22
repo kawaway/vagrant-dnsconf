@@ -7,7 +7,7 @@ If use synced-folder with nfs, vagrant try to install nfs-common but Installatio
 
 confirmed on
  - generic/debian9, generic/debian10
- - generic/ubuntu1804
+ - generic/ubuntu1804,generic/ubuntu1904
 
 ## Installation
 
